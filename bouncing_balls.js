@@ -18,20 +18,20 @@ Note:
 The ball can only be seen if the height of the rebounding ball is strictly greater than the window parameter. 
 */
 
-const bouncingBall = (h,  bounce,  window) => {
+const bouncingBall = (h, bounce, window) => {
     let bounceCount = 0;
-    if(h > 0 && bounce > 0 && bounce < 1 && window < h) {
-        while(h >= window) {
+    if (h > 0 && bounce > 0 && bounce < 1 && window < h) {
+        while (h >= window) {
             h *= bounce;
-            if(h < window) {
+            if (h < window) {
                 bounceCount++;
-            } else if(h > window) {
+            } else if (h > window) {
                 bounceCount += 2;
             }
         }
     } else {
-    return -1;
-  }
+        return -1;
+    }
     console.log(bounceCount);
     return bounceCount;
 }
